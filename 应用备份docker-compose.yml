@@ -68,12 +68,14 @@ services:
     volumes:
       - /root/ql/data:/ql/data
 
-  watchtower:
+watchtower:
     image: containrrr/watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
     command: --cleanup
+    environment:
+      - WATCHTOWER_SCHEDULE=0 0 10 * *
 
   aapanel:
     image: aapanel/aapanel:lib
