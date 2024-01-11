@@ -18,9 +18,11 @@ services:
     container_name: filebrowser
     volumes:
       - /:/srv
+      - filebrowser_data:/srv/data  # 新增挂载卷用于持久化数据
     restart: unless-stopped
     ports:
       - 8081:80
       
 volumes:
   portainer_data:
+  filebrowser_data:  # 新增持久化数据卷
