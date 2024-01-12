@@ -67,8 +67,7 @@ services:
       - 5700:5700
     volumes:
       - /root/ql/data:/ql/data
-
-watchtower:
+  watchtower:
     image: containrrr/watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
