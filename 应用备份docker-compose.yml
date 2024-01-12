@@ -93,6 +93,6 @@ watchtower:
     restart: unless-stopped
     network_mode: host
     volumes:
-      - ./db:/etc/x-ui
-      - ./cert:/root/cert
+      - /root/db:/etc/x-ui
+      - /root/cert:/root/cert
       
