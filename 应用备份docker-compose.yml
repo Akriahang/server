@@ -87,7 +87,7 @@ services:
       - /root/vhost:/www/server/panel/vhost
       
   x-ui:
-    image: enwaiax/x-ui
+    image: enwaiax/x-ui:alpha-zh
     container_name: x-ui
     restart: unless-stopped
     network_mode: host
