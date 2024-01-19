@@ -96,7 +96,7 @@ services:
       - /root/cert:/root/cert
       
   wg-easy:
-    image: ghcr.io/wg-easy/wg-easy
+    image: weejewel/wg-easy
     container_name: wg-easy
     environment:
       - WG_HOST=🚨YOUR_SERVER_IP
